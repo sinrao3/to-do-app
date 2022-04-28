@@ -27,7 +27,6 @@ pipeline {
         stage('Terraform') {
             steps {
                 sh '''
-                 cd terraform-kubeginners
                  terraform init
                  terraform plan
                  terraform apply -auto-approve
