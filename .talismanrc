@@ -1,17 +1,5 @@
 fileignoreconfig:
-- filename: terraform-kubeginners/terraform.tfstate.backup
-  checksum: d06f208fd768c1da7e5c03aa3bf5fa543a4149dbea198feaff777db99f3da518
-- filename: terraform-kubeginners/kubeconfig_eks-kubeginners
-  checksum: 6cc1d4a0bbbce9a1cf2eec1b4ce52d7dae789719e7b74dd50bb9ca4ed8a3a8fa
-- filename: terraform-kubeginners/terraform.tfstate
-  checksum: 34903d0370d10d9ba29b9886de47227364d9af9bab12dee40c26fa83a29f88a8
-- filename: kubernetes-deployment.yml
-  checksum: bca4eca02f7bac76009f3271effa45b6ffe2ca9af8fda462a85340887df48a55
 - filename: Jenkinsfile
-  checksum: bdec68b0163a95731542d051f3eb42936b07f41517e4f5dd97d053f52199955c
-- filename: main.tf
-  checksum: 5bee43e06c0a577ce13e87f6c33f9f7979be03d652f685784801be46762f7988
-- filename: terraform-s3-bucket.tf
-  checksum: e8a501a14d50ccf1c3961a45cd93a88e7e3002b838ccde129bdeb1ba1f3762ee
-
+  checksum: ca52eb2782f5e9f809c2facf21662aeca1a6fe4d75f7b2d5f976a57ac0181093
 version: ""
+
