@@ -14,7 +14,6 @@ pipeline {
             steps {
                 sh '''
                     echo "running the tests ......."
-
                 '''
             }
         }
@@ -22,7 +21,7 @@ pipeline {
         stage('Terraform') {
             steps {
                 sh '''
-                 terraform init -auto-approve
+                 terraform init -force-copy
                  terraform plan
                  terraform apply -auto-approve
                  /usr/local/bin/aws eks --region us-east-1 update-kubeconfig --name eks-kubeginners
