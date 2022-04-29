@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE_NAME = "hemanth0407/todo-app-kubeginners"
+        DOCKER_IMAGE_NAME = "sindhoorarao310/to-do-app-kubeginners:v2"
         DOCKER_USERNAME = "sindhoorarao310"
         DOCKER_PASSWORD = credentials('DOCKER_SECRET')
     }
