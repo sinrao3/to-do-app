@@ -5,3 +5,8 @@ build
 **/.git
 **/.DS_Store
 **/node_modules
+.gitignore
+Dockerfile
+build
+node_modules
+README.md

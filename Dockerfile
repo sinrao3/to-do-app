@@ -1,9 +1,15 @@
-FROM node:8.16.1-alpine
+FROM node:12-alpine AS builder
 WORKDIR /app
-COPY package.json /app
-RUN npm install
-RUN npm install react-scripts@3.4.0
-COPY . /app
-EXPOSE 3000
-CMD ["npm","run","start"]
+COPY package.json package.json
+COPY yarn.lock yarn.lock
+RUN yarn install --production
+COPY . .
+RUN yarn build
+
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY --from=builder /app/build .
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
 
