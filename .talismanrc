@@ -11,4 +11,7 @@ fileignoreconfig:
   checksum: bdec68b0163a95731542d051f3eb42936b07f41517e4f5dd97d053f52199955c
 - filename: main.tf
   checksum: 5bee43e06c0a577ce13e87f6c33f9f7979be03d652f685784801be46762f7988
+- filename: terraform-s3-bucket.tf
+  checksum: e8a501a14d50ccf1c3961a45cd93a88e7e3002b838ccde129bdeb1ba1f3762ee
+
 version: ""
