@@ -25,7 +25,7 @@ pipeline {
                  terraform plan
                  terraform apply -auto-approve
                  '''
-                 withAwsCli(
+                 withAws(
                           credentialsId: 'AWS',
                           defaultRegion: 'us-east-1') {
                  sh '''
