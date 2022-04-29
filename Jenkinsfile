@@ -4,8 +4,8 @@ pipeline {
         DOCKER_IMAGE_NAME = "sindhoorarao310/to-do-app-kubeginners"
         DOCKER_USERNAME = "sindhoorarao310"
         DOCKER_PASSWORD = credentials('DOCKER_SECRET')
-        ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')
-        SECRET_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+        //ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')
+       // SECRET_KEY = credentials('AWS_SECRET_ACCESS_KEY')
 
     }
     stages {
@@ -24,8 +24,14 @@ pipeline {
                  terraform init -force-copy
                  terraform plan
                  terraform apply -auto-approve
+                 '''
+                 withAwsCli(
+                          credentialsId: 'AWS',
+                          defaultRegion: 'us-east-1']) {
+                 sh '''
                  /usr/local/bin/aws eks --region us-east-1 update-kubeconfig --name eks-kubeginners
                 '''
+                }
             }
         }
 
