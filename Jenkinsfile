@@ -27,7 +27,7 @@ pipeline {
                  '''
                  withAwsCli(
                           credentialsId: 'AWS',
-                          defaultRegion: 'us-east-1']) {
+                          defaultRegion: 'us-east-1') {
                  sh '''
                  /usr/local/bin/aws eks --region us-east-1 update-kubeconfig --name eks-kubeginners
                 '''
