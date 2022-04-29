@@ -9,7 +9,7 @@ variable "subnet_id" {
 }
 variable "cluster_name" {
   type    = string
-  default = "eks-kubeginners"
+  default = "eks-kubeginners-jenkins"
 }
 variable "instance_type" {
   type    = string
