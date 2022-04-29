@@ -27,7 +27,7 @@ pipeline {
         stage('Terraform') {
             steps {
                 sh '''
-                 terraform init
+                 terraform init -auto-approve
                  terraform plan
                  terraform apply -auto-approve
                  aws eks --region us-east-1 update-kubeconfig --name eks-kubeginners
