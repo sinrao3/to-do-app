@@ -25,7 +25,7 @@ pipeline {
                  terraform plan
                  terraform apply -auto-approve
                  '''
-                 withAWS(credentialsId: 'AWS',defaultRegion: 'us-east-1') {
+                 withAWS(credentials:'aws-cred',defaultRegion: 'us-east-1') {
                  sh '''
                  /usr/local/bin/aws eks --region us-east-1 update-kubeconfig --name eks-kubeginners
                 '''
